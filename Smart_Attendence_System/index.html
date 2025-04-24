@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SRKR SMART ATTENDANCE SYSTEM</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZx_uDeZWw_m_CxJcYZdJ4aJD1qECpIfgTsQ&s" alt="SRKR LOGO" />
+      <h1>SRKR SMART ATTENDANCE SYSTEM</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" onclick="showLogin()">Faculty Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <div id="homePage">
+    <marquee behavior="scroll" direction="left" scrollamount="8" style="color: white; font-size: 20px; padding: 10px; font-weight: bold;">
+      🚀 Welcome to SRKR SMART ATTENDANCE SYSTEM - Faculty Signup Portal 🚀
+    </marquee>
+  </div>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="login-container" style="display: none;">
+    <h2>Faculty Login</h2>
+    <form onsubmit="login(); return false;">
+      <label for="faculty-id">Faculty ID:</label>
+      <input type="text" id="faculty-id" name="faculty_id" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <button class="b1" type="submit">Login</button>
+    </form>
+  </div>
+<center>
+  
+ <div id="lokesh" style="display: none;"> 
+  <!-- Faculty Options (after login) -->
+  <div id="facultyOptions">
+    <label for="departmentSelect">Department:</label>
+    <select id="departmentSelect">
+      <option value="">Select</option>
+      <option value="aiml">AIML</option>
+      <option value="aids">AIDS</option>
+      <option value="cse">CSE</option>
+      <option value="it">IT</option>
+      <option value="mech">MECH</option>
+      <option value="civil">CIVIL</option>
+    </select>
+ 
+    <label for="yearSelect">Year:</label>
+    <select id="yearSelect">
+      <option value="">Select</option>
+      <option value="1st">1st</option>
+      <option value="2nd">2nd</option>
+    </select>
+
+    <label for="semesterSelect">Semester:</label>
+    <select id="semesterSelect">
+      <option value="">Select</option>
+      <option value="1">1st</option>
+      <option value="2">2nd</option>
+    </select>
+
+    <label for="subjectSelect">Subject:</label>
+    <select id="subjectSelect">
+      <option value="">Select</option>
+    </select><br><br>
+    <button onclick="loadStudents()">Load Students</button>
+  </div>
+  <br><br>
+
+
+  <!-- Student Table -->
+  <div id="studentTableContainer" style="display: none;">
+    <h3>Student Details</h3>
+    <table border="1px">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Reg No.</th>
+          <th>Present</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+    
+    <button onclick="saveAttendance()">Save Attendance</button>
+  </div>
+
+   <div id="summaryContainer"></div>
+
+  </center>
+  <script src="script.js"></script>
+</body>
+</html>

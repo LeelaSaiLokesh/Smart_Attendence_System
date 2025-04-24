@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="C:/Users/Sowmya/Desktop/srkr logo.jpeg" alt="SRKR LOGO" />
+      <h1>SRKR SMART ATTENDANCE SYSTEM</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" onclick="showLogin()">Faculty Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <form class="signup-form" id="facultyForm">
+    <h2>Faculty Signup</h2>
+
+    <label for="faculty-name">Full Name:</label>
+      <input type="text" name="faculty_id"  placeholder="Enter Your Name" required><br> <br>
+      <label for="faculty-id">Faculty ID:</label>
+      <input type="faculty-id" id="faculty-id" name="Faculty ID" placeholder="Faculty ID" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="Email" required><br><br> 
+      <label for="departmenr">Department:</label> 
+    <select name="department" required>
+      <option value="">Select Department</option>
+      <option value="CSE">Computer Science</option>
+      <option value="ECE">Electronics</option>
+      <option value="ME">Mechanical</option>
+      <option value="CE">Civil</option>
+      
+    </select><br><br> 
+
+    <label for="password">Password:</label> 
+    <input type="password" name="password" placeholder="Create Password" required> <br><br>
+    <label for="confirmpassword">Confirm Password:</label> 
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required><br><br>
+    
+    <button onclick="Submit()">Submit</button></button>
+
+    <p class="success-message" id="successMessage">Account created successfully!</p>
+    
+  </form>
+  <script src="signup.js"></script>
+</body>
+</html>
